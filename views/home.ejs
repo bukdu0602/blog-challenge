@@ -4,9 +4,10 @@
 
 <% posting.forEach(function(letter){ %>
 <h1><%= letter.title %></h1>
-<p><%= letter.content %></p>
+<p class="shrink"><%= letter.content.substring(0, 100) + "..." %><a href="/posts/<%= letter.title %>">Read More</a></p>
 
 <% }); %>
+
 
 
 <%- include('partials/footer') -%>
